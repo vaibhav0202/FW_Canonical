@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    FW
+ * @package     FW_Canonical
+ * @copyright   Copyright (c) 2012 F+W Media, Inc. (http://www.fwmedia.com)
+ * @author		J.P. Daniel <jp.daniel@fwmedia.com>
+ */
+-->
+<config>    
+    <modules>
+        <FW_Canonical>
+            <version>0.1.0</version>
+        </FW_Canonical>
+    </modules>
+    <global>
+        <models>
+            <fw_canonical>
+                <class>FW_Canonical_Model</class>
+            </fw_canonical>
+        </models>
+    </global>
+    <frontend>
+        <events>
+        	<controller_action_layout_generate_blocks_after>
+        		<observers>
+        			<fw_controller_action_layout_generate_blocks_after>
+                        <class>fw_canonical/observer</class>
+                        <method>onAfterGenerateBlocks</method>        				
+        			</fw_controller_action_layout_generate_blocks_after>
+        		</observers>        		
+        	</controller_action_layout_generate_blocks_after>
+        </events>
+    </frontend>
+</config>
